@@ -28,7 +28,7 @@ To change radius: `geofilter_tests.rb`
 
 ### To run elsewhere:
 
-`ruby squisher_tests.rb`
+`ruby geofilter/geofilter_use_case.rb`
 
 # Testing
 
