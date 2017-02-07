@@ -14,9 +14,9 @@ def around_dublin_office km=100
 	# Print out
 	puts "Users found in #{km}km radius from Dublin Office:"
 	users.each do |user|
-		puts "# #{user['user_id']} - #{user["name"]}"
+		puts "# #{user["user_id"]} - #{user["name"]}"
 	end
-	"----"
+	nil
 end
 
 module Geofilter
