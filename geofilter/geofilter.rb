@@ -12,11 +12,11 @@ def around_dublin_office km=100
 	users = users.sort{|k,v|k["user_id"] <=> v["user_id"]}
 
 	# Print out
-	puts "Users found in #{km}km radius from Dublin Office:"
+	output = "Users found in #{km}km radius from Dublin Office:\n"
 	users.each do |user|
-		puts "# #{user["user_id"]} - #{user["name"]}"
+		output += "# #{user["user_id"]} - #{user["name"]}\n"
 	end
-	nil
+	output
 end
 
 module Geofilter
