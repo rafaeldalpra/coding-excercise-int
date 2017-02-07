@@ -10,7 +10,7 @@ To change test use case: `squisher_tests.rb`
 
 ### To run elsewhere:
 
-`ruby squisher/squisher_tests.rb`
+`ruby squisher/squisher_use_cases.rb`
 
 # Geofilter#distance
 
