@@ -3,20 +3,27 @@ require 'json'
 # Filter users within informed radius from the Dublin Office
 def around_dublin_office km=100
   # Read the file
-  file = File.open("source.txt").read.split("\n")
-  file.map!{ |line| JSON.parse(line) }
-  users = file.delete_if{ |line| 
-    Geofilter.distance(line["latitude"], line["longitude"]) > km
-  }
-
-  users = users.sort{|k,v|k["user_id"] <=> v["user_id"]}
-
+  users = load_users
+  users = filter_users_by_radius users, km
+  
   # Print out
   output = "Users found in #{km}km radius from Dublin Office:\n"
   users.each do |user|
     output += "# #{user["user_id"]} - #{user["name"]}\n"
   end
   output
+end
+
+def load_users
+  file = File.open("source.txt").read.split("\n")
+  file.map!{ |line| JSON.parse(line) }
+  file
+end
+
+def filter_users_by_radius users, km=100
+  users.delete_if{ |line| 
+    Geofilter.distance(line["latitude"], line["longitude"]) > km
+  }.sort{|k,v|k["user_id"] <=> v["user_id"]}
 end
 
 module Geofilter

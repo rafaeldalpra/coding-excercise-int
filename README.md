@@ -29,3 +29,7 @@ To change radius: `geofilter_tests.rb`
 ### To run elsewhere:
 
 `ruby squisher_tests.rb`
+
+# Testing
+
+`sh test.sh` will automatically load and run the tests for both "features"

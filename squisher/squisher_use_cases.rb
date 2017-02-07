@@ -17,8 +17,7 @@ puts use_case.inspect
 
 puts "Result"
 puts (use_case.squish).inspect
-
-
+	
 Benchmark.bm do |x|
   x.report { use_case.squish }
   x.report { use_case.flatten }
