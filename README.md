@@ -2,7 +2,7 @@
 
 An alternative to Ruby's `Array.flatten` method. 
 
-To change test use case: `squisher_tests.rb`
+To change test use case: `squisher_use_cases.rb`
 
 ### To run the Docker setup included:
 
@@ -20,7 +20,7 @@ Takes a file with user records in JSON format.
 
 Returns a human-friendly list of users within the radius informed (100km in the example)
 
-To change radius: `geofilter_tests.rb`
+To change radius: `geofilter_use_case.rb`
 
 ### To run the Docker setup included:
 
